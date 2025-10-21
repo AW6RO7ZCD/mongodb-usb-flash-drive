@@ -1,0 +1,10 @@
+[Unit]
+Description=enable MongoDB server
+Documentation=https://github.com/AW6RO7ZCD/mongodb-usb-flash-drive
+
+[Service]
+ExecStart=/x/mongodb/bin/mongod --dbpath /x/mongodb/data --logpath /x/mongodb/log/mongod.log --fork
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
